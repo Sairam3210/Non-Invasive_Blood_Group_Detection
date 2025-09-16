@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/images/favicon.png" rel="icon">
+  <link href="../static/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../static/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+                .logout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .logout a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logout a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            margin-bottom: 5px;
+            text-align: left;
+            width: 100%;
+        }
+        input[type="file"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #imagePreview {
+            display: none;
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid white;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+
+.logout-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+
+.mobile-nav {
+    transition: opacity 2.0s ease-in-out; /* Adjust the duration (0.5s) and easing as needed */
+    opacity: 1; /* Initially visible */
+}
+
+.mobile-nav.hidden {
+    opacity: 0; /* Hidden state */
+}
+
+    </style>
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="/home" class="logo d-flex align-items-center me-auto">
+        <img src="../static/images/logo.png" alt="">
+        <h1 class="sitename">Bloodgroup Prediction</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+       <!--     <ul>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="/team">Team</a></li>
+          {% if 'user_id' in session %}
+             <li><a href="/predict_blood_group">Predict</a></li>
+             <li><a href="/Accurancy">Accurancy</a></li>
+            <li><a href="/profile"><i class="bi bi-person-circle"></i> Profile</a></li>
+              <li><a href="/logout" class="logout-link">
+    <i class="bi bi-box-arrow-right"></i> Logout
+</a></li>     
+
+        {% else %}
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Sign Up</a></li>
+        {% endif %}
+
+                  </ul>   -->
+                  <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="chart.html">Chart</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+<!--      <a class="btn-getstarted" href="about">Get Started</a>-->
+
+    </div>
+  </header>
+
+
+<main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero-bg">
+        <img src="../static/images/hero-bg-light.jpg" alt="">
+      </div>
+      <div class="container text-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <h1 data-aos="fade-up">Welcome to <span>Bloodgroup Prediction</span></h1>
+          <p data-aos="fade-up" data-aos-delay="100">New way of Predicting Blood Group with Fingerprint<br></p>
+<!--          <div class="d-flex" data-aos="fade-up" data-aos-delay="200">-->
+<!--            <a href="login" class="btn-get-started">Get Started</a>-->
+<!--            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>-->
+<!--          </div>-->
+          <img src="../static/images/homepic.jpg" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+<section id="featured-services" class="featured-services section light-background">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex">
+          <!-- Updated AI Icon -->
+          <div class="icon flex-shrink-0"><i class="bi bi-cpu"></i></div> <!-- AI-related icon -->
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">AI Model Development</a></h4>
+            <p class="description">Our team develops advanced CNN models that analyze patterns in medical data to predict blood groups accurately.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-laptop"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Data Preprocessing</a></h4>
+            <p class="description">We perform thorough data preprocessing, cleaning, and augmentation to ensure high-quality inputs for training the CNN model.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex">
+          <div class="icon flex-shrink-0"><i class="bi bi-graph-up-arrow"></i></div>
+          <div>
+            <h4 class="title"><a href="#" class="stretched-link">Model Evaluation & Optimization</a></h4>
+            <p class="description">We evaluate our CNN models using various metrics and optimize them for higher accuracy and faster predictions for blood group classification.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Featured Services Section -->
+
+    
+    </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>

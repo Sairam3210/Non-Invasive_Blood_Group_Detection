@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Detection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form Section */
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="tel"], select, input[type="file"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        button {
+            background-color: #2f4faf;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3126d1;
+        }
+
+        .preview-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        img#fingerprintPreview {
+            max-width: 150px;
+            max-height: 150px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Result Section */
+        .result-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-section h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #3831b9;
+            color: white;
+        }
+
+        table td img {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 4px;
+        }
+
+        .alert {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blood Group Detection From Fingerprint</h1>
+
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Enter Details</h2>
+            <form id="bloodGroupForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <select id="age" required>
+                        <option value="" disabled selected>Select your age</option>
+                        <!-- Age range -->
+                        <script>
+                            for (let i = 18; i <=100; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fingerprint">Upload Fingerprint</label>
+                    <input type="file" id="fingerprint" accept="image/*" onchange="previewFingerprint()" required>
+                </div>
+                <div class="preview-container">
+                    <img id="fingerprintPreview" alt="Fingerprint Preview" />
+                </div>
+                <button type="button" onclick="submitDetails()">Detect Blood Group</button>
+            </form>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-section" id="resultSection" style="display: none;">
+            <h2>Detection Result</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="resultTableBody"></tbody>
+            </table>
+        </div>
+    <!--Flash Messages Section  -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-container">
+                {% for category, message in messages %}
+                    <div class="flash-message flash-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}         
+    
+    </div>
+
+    <script>
+        function previewFingerprint() {
+            const fileInput = document.getElementById('fingerprint');
+            const previewImage = document.getElementById('fingerprintPreview');
+            const file = fileInput.files[0];
+            
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function submitDetails() {
+            const name = document.getElementById('name').value;
+            const mobile = document.getElementById('mobile').value;
+            const gender = document.getElementById('gender').value;
+            const age = document.getElementById('age').value;
+            const fingerprintInput = document.getElementById('fingerprint');
+            const fingerprintFile = fingerprintInput.files[0];
+
+            if (!name || !mobile || !gender || !age || !fingerprintFile) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fingerprintFile);
+
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultSection = document.getElementById('resultSection');
+                const resultTableBody = document.getElementById('resultTableBody');
+
+                resultTableBody.innerHTML = `
+                    <tr><td>Name</td><td>${name}</td></tr>
+                    <tr><td>Mobile</td><td>${mobile}</td></tr>
+                    <tr><td>Gender</td><td>${gender}</td></tr>
+                    <tr><td>Age</td><td>${age}</td></tr>
+                    <tr><td>Fingerprint</td><td><img src="${document.getElementById('fingerprintPreview').src}" style="max-width: 100px; max-height: 100px;" alt="Uploaded Fingerprint" /></td></tr>
+                    <tr><td>Confidence</td><td>${data.confidence}</td></tr>
+                    <tr><td>Blood Group</td><td>${data.predicted_label}</td></tr>
+                `;
+
+                resultSection.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>

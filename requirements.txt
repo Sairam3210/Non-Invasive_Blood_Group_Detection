@@ -1,0 +1,114 @@
+Python 3.12.3
+Name: tensorflow
+Version: 2.18.0
+Coding Language: Python 3.12.3, HTML, CSS, JS
+• Web Framework: Flask
+• Packages Used: 
+Tensorflow-2.18.0                    	
+Sickit-learn-1.2.3
+Pandas-2.2.2				
+Pillow-10.3.0
+Opencv2-python-4.10.0.84		
+Keras-3.3.3
+Numpy
+
+# Core Deep Learning & Machine Learning  
+tensorflow==2.18.0  # TensorFlow is an open source machine learning framework for everyone.
+keras==3.3.3  
+scikit-learn==1.2.3  
+numpy  
+
+# Data Processing & Handling  
+pandas==2.2.2  
+opencv-python==4.10.0.84  
+pillow==10.3.0  
+
+# Image Processing & Augmentation  
+matplotlib==3.8.2  
+seaborn==0.13.2  
+albumentations==1.4.0  
+
+# Flask Web Framework & API  
+flask==3.0.2  
+flask-cors==4.0.0  
+flask-wtf==1.2.1  
+
+# File Handling & Utilities  
+werkzeug==3.0.2  
+gunicorn==21.2.0  
+requests==2.31.0  
+
+# Other Useful Libraries  
+tqdm==4.66.2  # Progress bar  
+h5py==3.10.0  # Model saving in HDF5 format  
+
+# Jupyter Notebook & Debugging  
+ipython==8.24.0  
+notebook==7.1.2  
+
+ System Requirements: 
+    HARDWARE REQUIREMENTS: 
+        • System: Pentium i3 Processor. 
+        • Hard Disk: 500 GB. 
+        • Monitor: 15" LED 
+        • Input Devices: Keyboard, Mouse 
+        • Ram: 4 GB 
+    SOFTWARE REQUIREMENTS: 
+        • Operating system: Windows 10 Pro 
+        • Coding Language: Python 3.12.3, HT3ML, CSS, JS 
+        • Web Framework: Flask
+
+
+####################  BLUE PRINT OF TOTAL PROJECT   ####################
+
+
+NON-INVASIVE-BLOOD-GROUP-DETECTION/
+│── dataset_blood_group/                   # Contains images for 8 classes  
+│   ├── A_Positive/  
+│   ├── A_Negative/  
+│   ├── B_Positive/  
+│   ├── B_Negative/  
+│   ├── AB_Positive/  
+│   ├── AB_Negative/  
+│   ├── O_Positive/  
+│   ├── O_Negative/  
+|
+│── notebooks/                              # Jupyter Notebook for research and experiments  
+│   ├── bloodgrpclassification.ipynb        # Lists required libraries  
+│                                           # Contains model training code  
+│
+│── models/                     # Stores trained models  
+│   ├── model.keras             # Saved deep learning model  
+│   ├── model.h5   (optional)   # Backup in HDF5 format  
+│
+│
+│── static/                      # Static files for the web app  
+│   ├── css/  
+│   │   ├── login.css  
+│   │   ├── register.css  
+│   ├── images/  
+│   │   ├── login.jpg  
+│   │   ├── register.jpg  
+│   ├── js/  
+│   │   ├── main.js  
+│   │   ├── main1.js
+│   │──vendor/..
+|
+|
+│── templates/                   # HTML templates for frontend  
+│   ├── index.html  
+│   ├── register.html  
+│   ├── login.html  
+│   │── about.html
+|   │── chart.html
+|   │── home.html
+|
+│── uploads/                     # Stores user-uploaded images for prediction  
+│
+│── app.py    # Main Flask app file  
+|                    
+│── requirements.txt               # Required dependencies for VS Code  
+│── project_documentation.pdf      # Complete project report  
+|
+│──ppt
+

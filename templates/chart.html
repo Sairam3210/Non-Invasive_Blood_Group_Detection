@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/images/favicon.png" rel="icon">
+  <link href="../static/images/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../static/css/main.css" rel="stylesheet">
+  <style>
+  /* Container for each image */
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px; /* rounded corners */
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* soft shadow for depth */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  /* Smooth transition for image hover effect */
+  .hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    max-width: 100%;
+  }
+
+  /* Hover effect */
+  .hover-effect:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Section Titles */
+  .section-title h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .section-title p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    font-style: italic;
+  }
+
+  /* Padding and Spacing for Sections */
+  .py-5 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+
+  /* Title and Subtitle Styling */
+  .section-title.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2a2a2a;
+    letter-spacing: 1px;
+  }
+
+  /* Image Styling */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* rounded edges for images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Mobile-Friendly Adjustments */
+  @media (max-width: 768px) {
+    .section-title h3 {
+      font-size: 1.6rem;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+    }
+  }
+
+/*----------------------------------------------------------------
+     To add a delay (in seconds) before the mobile navigation menu appears or disappears,
+  --------------------------------------------------------------- */
+
+  .mobile-nav {
+  transition: opacity 2.0s ease-in-out; /* Adjust the duration (0.5s) and easing as needed */
+  opacity: 1; /* Initially visible */
+}
+
+.mobile-nav.hidden {
+  opacity: 0; /* Hidden state */
+}
+
+</style>
+    
+
+</head>
+
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="../static/images/logo.png" alt="">
+        <h1 class="sitename">Bloodgroup Prediction</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+       <!-- <ul>
+          <li><a href="/home" >Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <!-- {% if 'user_id' in session %}   - ->
+                <li><a href="/predict_blood_group">Predict</a></li>
+               <li><a href="/Accurancy" class="active">Accurancy</a></li>
+                <li><a href="/profile"><i class="bi bi-person-circle"></i> Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+          <!--  {% else %}   - ->
+              <li><a href="/login">Login</a></li>
+              <li><a href="/signup">Sign Up</a></li>
+       <!--     {% endif %}    - ->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </ul>    -->
+
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="chart.html">Chart</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </ul>
+
+      </nav>
+    </div>
+  </header>
+
+
+<main class="main">
+
+<!-- Hero Section -->
+<section id="hero" class="hero section">
+  <div class="hero-bg">
+    <img src="../static/images/hero-bg-light.jpg" alt="Background image of the hero section" class="hero-bg-image">
+  </div>
+  
+  <div class="container text-center position-relative">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      
+      <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+        How <span class="highlight">Accurate</span> Is This?
+      </h1>
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        A Revolutionary Method for Predicting Blood Groups Using Fingerprints.
+      </p>
+      
+      <figure class="hero-image-wrapper" data-aos="zoom-out" data-aos-delay="400">
+        <img src="../static/images/66.png" class="img-fluid hero-img" alt="Illustration of blood group detection via fingerprints" width="500" height="100">
+        <figcaption class="hero-img-caption">Advanced technology for fingerprint-based blood group prediction.</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+<!-- /Hero Section -->
+
+
+
+<!-- Featured Services Section -->
+<section id="featured-services" class="featured-services section light-background py-5">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Blood Group Detection Service -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-fingerprint" style="font-size: 3rem; color: #007bff;"></i>
+          </div>
+          <div>
+            <h4 class="title text-primary"><a href="#" class="stretched-link text-decoration-none">Blood Group Prediction Using Fingerprint</a></h4>
+            <p class="description">Leveraging cutting-edge fingerprint recognition technology, our system provides a fast, accurate, and non-invasive method for blood group detection. This revolutionary approach ensures quicker results in emergency situations, offering a unique solution for hospitals and clinics.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Blood Group Detection Service -->
+
+      <!-- Project Planning -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-briefcase" style="font-size: 3rem; color: #28a745;"></i>
+          </div>
+          <div>
+            <h4 class="title text-success"><a href="#" class="stretched-link text-decoration-none">Project Planning</a></h4>
+            <p class="description">Our team meticulously plans each project phase for smooth transitions, timely delivery, and maximum efficiency, ensuring that every milestone is met with precision.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Task Management -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-card-checklist" style="font-size: 3rem; color: #ffc107;"></i>
+          </div>
+          <div>
+            <h4 class="title text-warning"><a href="#" class="stretched-link text-decoration-none">Task Management</a></h4>
+            <p class="description">We optimize resources, track progress, and keep stakeholders informed with advanced task management tools, ensuring every detail is accounted for throughout the project lifecycle.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Data Analytics -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-bar-chart" style="font-size: 3rem; color: #17a2b8;"></i>
+          </div>
+          <div>
+            <h4 class="title text-info"><a href="#" class="stretched-link text-decoration-none">Data Analytics</a></h4>
+            <p class="description">We use advanced data analytics to extract actionable insights, helping you make informed decisions that drive business growth and enhance operational efficiency.</p>
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+
+      <!-- Fingerprint Authentication -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-shield-lock" style="font-size: 3rem; color: #007bff;"></i>
+          </div>
+          <div>
+            <h4 class="title text-primary"><a href="#" class="stretched-link text-decoration-none">Fingerprint Authentication</a></h4>
+            <p class="description">Our advanced fingerprint authentication system offers secure, seamless user verification for applications ranging from secure access to sensitive information to biometric payment systems.</p>
+          </div>
+        </div>
+      </div><!-- End Fingerprint Authentication -->
+
+      <!-- Real-Time Data Processing -->
+      <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item d-flex flex-column align-items-start p-4 bg-white shadow-lg rounded-lg">
+          <div class="icon flex-shrink-0 mb-3">
+            <i class="bi bi-clock" style="font-size: 3rem; color: #28a745;"></i>
+          </div>
+          <div>
+            <h4 class="title text-success"><a href="#" class="stretched-link text-decoration-none">Real-Time Data Processing</a></h4>
+            <p class="description">We provide real-time data processing capabilities that help businesses make timely, data-driven decisions. Our solution offers real-time insights, empowering organizations to act on emerging opportunities and mitigate risks instantly.</p>
+          </div>
+        </div>
+      </div><!-- End Real-Time Data Processing -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Featured Services Section -->
+
+
+<!-- ======= Book a Table Section ======= -->
+<section id="book-a-table" class="book-a-table py-5" style="background: #f7f7f7;">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="section-title text-center mb-5">
+      <h2 style="font-size: 2.5rem; font-weight: bold; color: #333;">Project Analysis and Results</h2>
+      <p style="font-size: 1.2rem; color: #666;">Explore various aspects of our project’s performance with key analysis plots.</p>
+    </div>
+
+    <!-- Dataset Class Distribution Section -->
+    <section id="precision-recall" class="work-process py-5">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h3>Dataset Class Distribution</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8" data-aos="fade-right">
+            <div class="image-container">
+              <img src="../static/images/classdistribution.jpg" class="img-fluid hover-effect" alt="Precision Recall Plot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Accuracy Plot Section -->
+    <section id="accuracy-plot" class="work-process py-5">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h3>Performance Metrices</h3>
+          <h4> Accuracy | Precision | Recall | f1-Score </h4> 
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8" data-aos="fade-right">
+            <div class="image-container">
+              <img src="../static/images/a&p&r&f1.png" class="img-fluid hover-effect" alt="Accuracy Plot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Training and Testing Loss Ratio Section -->
+<section id="training-testing-loss" class="work-process py-5">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h3>Training and Validation Ratio</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8" data-aos="fade-right">
+        <div class="image-container">
+          <img src="../static/images/t&v-Ratio.png" class="img-fluid hover-effect" alt="Training and Testing Loss Ratio">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Precision Recall Section -->
+    <section id="precision-recall" class="work-process py-5">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h3>Confusion Matrix</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8" data-aos="fade-right">
+            <div class="image-container">
+              <img src="../static/images/confusion-matrix.jpg" class="img-fluid hover-effect" alt="Precision Recall Plot">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- Overall Architecture Section -->
+    <section id="overall-architecture" class="work-process py-5">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h3>Overall Architecture of the Project</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8" data-aos="fade-right">
+            <div class="image-container">
+              <img src="../static/images/architecture.png" class="img-fluid hover-effect" alt="Project Architecture">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<!-- Additional Styling for Hover Effects and Visual Enhancements -->
+
+   
+
+ <footer id="footer">
+    <div class="container">
+      <p>&copy; 2025 Bloodgroup Prediction. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../static/js/main.js"></script>
+
+</body>
+
+</html>
+

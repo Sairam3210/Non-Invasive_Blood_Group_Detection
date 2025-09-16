@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    
+    <!-- Custom CSS for enhanced design -->
+    <style>
+        body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+}
+
+#portfolio-details {
+    padding: 60px 0;
+}
+
+.portfolio-details-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.portfolio-details-content h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #3b4a5e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portfolio-details-content img {
+    width: 250px; /* Fixed size */
+    height: 250px; /* Fixed size */
+    border-radius: 50%; /* Circular border */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure the image covers the circle */
+    display: block; /* Center the image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6c757d;
+}
+
+.highlight-text {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.portfolio-info {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.portfolio-info h4 {
+    font-size: 1.6rem;
+    color: #3b4a5e;
+    margin-bottom: 15px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.list-group-item strong {
+    color: #3b4a5e;
+}
+
+.list-group-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.list-group-item a:hover {
+    text-decoration: underline;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .portfolio-details-content {
+        padding: 20px;
+    }
+
+    .portfolio-details-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-info {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio-details-content {
+        padding: 15px;
+    }
+
+    .portfolio-details-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio-info {
+        margin-top: 15px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="portfolio-details-content" id="portfolio-content">
+                        <!-- Content will be injected here by JavaScript -->
+                    </div>
+                <!-- Navigation Buttons -->
+                <div class="portfolio-navigation mt-4 d-flex justify-content-between">
+                    <button id="prev-btn" class="btn btn-primary">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <button id="next-btn" class="btn btn-primary">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Project Info removed -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Portfolio Details Section -->
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="../static/js/script.js"></script>
+
+    <script>
+    // Get query parameter from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const bloodGroup = urlParams.get('bloodGroup');
+
+    // Content for each blood group
+    const bloodGroupDetails = {
+        'A+VE': {
+            title: 'A +VE Blood Group',
+            description: 'The A+ blood group is one of the most common blood types, with the "A" antigen on red blood cells and the Rh factor present. It can donate to A+, AB+, and can receive from A+, A-, O+, and O-. It is frequently used in transfusions due to its widespread occurrence. Its compatibility is crucial for regular medical needs, and it plays a significant role in the blood supply system.',
+            additionalInfo: [
+                { label: 'Common in', value: '35% of the population' },
+                { label: 'Can Donate to', value: 'A+, AB+' },
+                { label: 'Can Receive from', value: 'A+, A-, O+, O-' },
+            ],
+            image: '../static/images/portfolio/A+.jpg',
+        },
+        'B+VE': {
+            title: 'B +VE Blood Group',
+            description: 'The B+ blood group contains the B antigen on red blood cells and the Rh factor. This blood type can donate to B+, AB+ and can receive from B+, B-, O+, and O-. It is essential in blood transfusions, especially in hospitals where surgeries or emergencies are common. Blood donations from this group are highly valued.',
+            additionalInfo: [
+                { label: 'Common in', value: '10% of the population' },
+                { label: 'Can Donate to', value: 'B+, AB+' },
+                { label: 'Can Receive from', value: 'B+, B-, O+, O-' },
+            ],
+            image: '../static/images/portfolio/B+.jpg',
+        },
+        'AB+VE': {
+            title: 'AB +VE Blood Group',
+            description: 'The AB+ blood group is considered the universal plasma donor, as it can receive blood from any group (A+, B+, AB+, O+). This rare blood type is crucial for plasma donations, especially in hospitals where life-saving plasma transfusions are needed. Individuals with this blood type are vital for the medical community, especially during crises.',
+            additionalInfo: [
+                { label: 'Common in', value: '3% of the population' },
+                { label: 'Can Donate to', value: 'AB+' },
+                { label: 'Can Receive from', value: 'All blood groups' },
+            ],
+            image: '../static/images/portfolio/AB+.jpg',
+        },
+        'A-VE': {
+            title: 'A -VE Blood Group',
+            description: 'A- blood group lacks the Rh factor and has the A antigen on red blood cells. It is a rare blood type that can donate to A-, A+, AB-, and AB+. It is crucial for specialized transfusions and is often in high demand for rare cases and medical procedures requiring highly specific blood types.',
+            additionalInfo: [
+                { label: 'Common in', value: '2% of the population' },
+                { label: 'Can Donate to', value: 'A-, A+, AB-, AB+' },
+                { label: 'Can Receive from', value: 'A-, O-' },
+            ],
+            image: '../static/images/portfolio/A-.jpg',
+        },
+        'B-VE': {
+            title: 'B -VE Blood Group',
+            description: 'The B- blood group contains the B antigen and lacks the Rh factor. This rare blood type can donate to B-, B+, AB-, and AB+, and it is essential in specific medical procedures and transfusions. Its rarity makes it a highly valuable blood type, especially for emergency situations where matching is critical.',
+            additionalInfo: [
+                { label: 'Common in', value: '1% of the population' },
+                { label: 'Can Donate to', value: 'B-, B+, AB-, AB+' },
+                { label: 'Can Receive from', value: 'B-, O-' },
+            ],
+            image: '../static/images/portfolio/B-.jpg',
+        },
+        'AB-VE': {
+            title: 'AB -VE Blood Group',
+            description: 'AB- is the rarest blood type and can donate to AB-, AB+, A-, B-. This blood type is critical for certain complex medical treatments, and it plays a key role in specialized transfusions. Due to its rarity, it is highly valuable for medical professionals.',
+            additionalInfo: [
+                { label: 'Common in', value: '0.5% of the population' },
+                { label: 'Can Donate to', value: 'AB-, AB+, A-, B-' },
+                { label: 'Can Receive from', value: 'AB-, A-, B-, O-' },
+            ],
+            image: '../static/images/portfolio/AB-.jpg',
+        },
+        'O+VE': {
+            title: 'O +VE Blood Group',
+            description: 'The O+ blood group is one of the most common and can donate to O+, A+, B+, AB+. It can only receive from O+, O-, A+, and B+. Its high frequency makes it critical for medical procedures, and its ability to donate to a wide range of recipients makes it extremely important in blood donation drives.',
+            additionalInfo: [
+                { label: 'Common in', value: '37% of the population' },
+                { label: 'Can Donate to', value: 'O+, A+, B+, AB+' },
+                { label: 'Can Receive from', value: 'O+, O-, A+, B+' },
+            ],
+            image: '../static/images/portfolio/O+.jpg',
+        },
+        'O-VE': {
+            title: 'O -VE Blood Group',
+            description: 'O- is known as the universal blood donor type for transfusions and can donate to all other blood groups. It is highly valued in emergencies and is crucial in saving lives in critical situations. O- blood is often needed in trauma centers and other emergency situations.',
+            additionalInfo: [
+                { label: 'Common in', value: '1% of the population' },
+                { label: 'Can Donate to', value: 'All blood types' },
+                { label: 'Can Receive from', value: 'O-' },
+            ],
+            image: '../static/images/portfolio/O-.jpg',
+        },
+    };
+
+    // Define the order of blood groups for navigation
+    const bloodGroupOrder = ['A+VE', 'B+VE', 'AB+VE', 'A-VE', 'B-VE', 'AB-VE', 'O+VE', 'O-VE'];
+
+    // Get the details for the selected blood group
+    const group = bloodGroupDetails[bloodGroup];
+    
+   
+
+    if (group) {
+        document.title = group.title;
+        document.getElementById('portfolio-content').innerHTML = `<h2>${group.title}</h2>
+            <img src="${group.image}" class="img-fluid" alt="${group.title}">
+            <p class="portfolio-description mt-4">${group.description}</p>
+            <div class="portfolio-info">
+                <h4>Key Details</h4>
+                <ul class="list-group">
+                    ${group.additionalInfo.map(info => `
+                        <li class="list-group-item">
+                            <strong>${info.label}:</strong> ${info.value}
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        `;
+    } else {
+        // Handle the case where the blood group is not found
+        document.getElementById('portfolio-content').innerHTML = '<p>Sorry, details not available.</p>';
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+/**
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background: #b7dbe4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+button.btn {
+  width: 100%;
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.btn:hover {
+  background: #0056b3;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  text-align: center;
+  font-size: 14px;
+}                         **/
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url('../static/image/login.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  margin: auto;
+  width: 450px; /* Adjust width as needed */
+  margin-top: 100px; /* Center vertically */
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.sparkle-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sparkle-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box i {
+  position: absolute;
+  left: 10px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(18, 17, 17); /* Change color as needed */
+  pointer-events: none; /* Prevent clicks on the icon */
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Add padding to the left for the icon */
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.remember-forgot {
+  color: #1d0fb8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.remember-forgot a {
+  text-decoration: none;
+  color: #2417b2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.register-link a {
+  text-align: center;
+  font-size: 14px;
+  color: #1d0fb8;
+}   
