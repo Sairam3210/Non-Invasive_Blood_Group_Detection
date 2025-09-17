@@ -84,23 +84,17 @@ NON-INVASIVE-BLOOD-GROUP-DETECTION/
 │
 │── static/                      # Static files for the web app  
 │   ├── css/  
-│   │   ├── login.css  
-│   │   ├── register.css  
+│   │  
 │   ├── images/  
-│   │   ├── login.jpg  
-│   │   ├── register.jpg  
+│   │  
 │   ├── js/  
-│   │   ├── main.js  
-│   │   ├── main1.js
-│   │──vendor/..
+│   │  
 |
 |
 │── templates/                   # HTML templates for frontend  
 │   ├── index.html  
 │   ├── register.html  
-│   ├── login.html  
-│   │── about.html
-|   │── chart.html
+│   ├── login.html  l
 |   │── home.html
 |
 │── uploads/                     # Stores user-uploaded images for prediction  
