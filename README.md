@@ -22,6 +22,10 @@ This research represents a major advancement in integrating biometric data with 
 # Fingerprint-Based Blood Group Detection
 
 This project aims to detect blood groups (A, B, AB, O) using a non-invasive approach by analyzing fingerprints. The system is designed to provide a quick and simple way to determine blood type without the need for a traditional blood test.
+
+#### Project Architecture
+<img width="644" height="299" alt="image" src="https://github.com/user-attachments/assets/bbd34fde-73b7-4a99-a54b-dcb387492421" />
+
 ## Folder Structure
 
 <img width="383" height="623" alt="image" src="https://github.com/user-attachments/assets/992e2cb2-dac2-497c-bd4d-99504ee20732" />
@@ -29,7 +33,7 @@ This project aims to detect blood groups (A, B, AB, O) using a non-invasive appr
 
 ## Prerequisites
 
-#### Python 3.x
+#### Python 3.x ( Python Flask )
 
 ### The following Python libraries:
 
@@ -46,6 +50,8 @@ This project aims to detect blood groups (A, B, AB, O) using a non-invasive appr
  #### opencv-python
 
 #### pillow
+
+#### testing Tool - Post man API
 
 ## Getting Started
 
@@ -71,7 +77,9 @@ The model was trained on a comprehensive dataset of fingerprint images, carefull
 
 #### Dataset Classification
 
+The bar graph titled "Dataset Class Distribution" illustrates the number of samples belonging to each blood group in the dataset used for training and evaluation.
 
+![classdistribution](https://github.com/user-attachments/assets/5f33e7b9-c515-4e14-b2ca-5bbba356d202)
 
 
 #### Download the dataset:
